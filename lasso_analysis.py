@@ -38,8 +38,8 @@ NAME_MAP = {
 }
 
 # ---------- 1. 读数据 ----------
-df_std = pd.read_csv('data/soy_sauce_flavor_standardized.csv', encoding='utf-8')
-df_raw = pd.read_csv('data/soy_sauce_flavor_raw.csv', encoding='utf-8')
+df_std = pd.read_csv('data/soy_sauce_flavor_standardized.csv', encoding='utf-8-sig')
+df_raw = pd.read_csv('data/soy_sauce_flavor_raw.csv', encoding='utf-8-sig')
 
 X_raw = df_raw.drop(columns=['ID', '咸味评分'])
 y = df_raw['咸味评分'].to_numpy(dtype=float)
